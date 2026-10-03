@@ -1,0 +1,20 @@
+.report-form {
+  padding: 24px;
+}
+
+.photo-preview {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.form-error {
+  color: var(--danger);
+  margin: 12px 0;
+}
+
+.report-form .btn {
+  margin-top: 8px;
+}

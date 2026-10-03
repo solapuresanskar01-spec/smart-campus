@@ -1,0 +1,48 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  padding: 16px;
+}
+
+.stat-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 1.8rem;
+  margin-top: 6px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.reports-list {
+  display: grid;
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .stats-grid,
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid,
+  .filters {
+    grid-template-columns: 1fr;
+  }
+}

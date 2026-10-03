@@ -1,0 +1,71 @@
+.issue-card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  overflow: hidden;
+}
+
+.issue-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 140px;
+  object-fit: cover;
+  background: #dce8e3;
+}
+
+.issue-photo.placeholder {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.issue-body {
+  padding: 16px;
+}
+
+.issue-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.issue-top h3 {
+  font-size: 1.05rem;
+}
+
+.issue-meta,
+.issue-foot {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.issue-desc {
+  margin-top: 10px;
+}
+
+.issue-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.issue-actions select,
+.issue-actions input {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #fff;
+}
+
+@media (max-width: 700px) {
+  .issue-card {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-photo {
+    min-height: 120px;
+  }
+}

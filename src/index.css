@@ -1,0 +1,156 @@
+:root {
+  --bg: #f3f7f5;
+  --surface: #ffffff;
+  --text: #1f2a24;
+  --muted: #5b6b63;
+  --border: #d7e3dc;
+  --primary: #0f766e;
+  --primary-dark: #0b5c56;
+  --primary-soft: #e6f4f1;
+  --pending: #b45309;
+  --pending-bg: #fff7ed;
+  --progress: #1d4ed8;
+  --progress-bg: #eff6ff;
+  --resolved: #15803d;
+  --resolved-bg: #ecfdf3;
+  --danger: #b91c1c;
+  --shadow: 0 8px 24px rgba(15, 40, 32, 0.08);
+  --radius: 12px;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.page {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.page-header h1 {
+  font-size: 1.75rem;
+}
+
+.page-header p {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-ghost {
+  background: var(--primary-soft);
+  color: var(--primary-dark);
+}
+
+.btn-ghost:hover {
+  background: #d5ece7;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+@media (max-width: 700px) {
+  .page {
+    width: calc(100% - 24px);
+    padding-top: 16px;
+  }
+
+  .page-header h1 {
+    font-size: 1.4rem;
+  }
+}
